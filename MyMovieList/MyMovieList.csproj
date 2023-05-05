@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginRequiredPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginRequiredPanel.Designer.cs">
+      <DependentUpon>LoginRequiredPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
