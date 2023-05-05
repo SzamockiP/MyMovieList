@@ -16,5 +16,12 @@ namespace MyMovieList
         {
             InitializeComponent();
         }
+
+        private void loginPanelBtn_Click(object sender, EventArgs e)
+        {
+            // Run parent function to show login form
+            MainForm parent = (MainForm)this.Parent;
+            parent.ShowLoginForm();
+        }
     }
 }

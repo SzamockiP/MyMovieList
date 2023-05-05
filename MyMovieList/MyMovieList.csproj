@@ -108,6 +108,9 @@
     <Compile Include="UserMovieListPanel.Designer.cs">
       <DependentUpon>UserMovieListPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +123,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegisterPanel.resx">
+      <DependentUpon>RegisterPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

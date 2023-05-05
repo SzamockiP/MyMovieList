@@ -28,10 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.registerPanelBtn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // registerPanelBtn
+            // 
+            this.registerPanelBtn.Location = new System.Drawing.Point(35, 103);
+            this.registerPanelBtn.Name = "registerPanelBtn";
+            this.registerPanelBtn.Size = new System.Drawing.Size(75, 23);
+            this.registerPanelBtn.TabIndex = 0;
+            this.registerPanelBtn.Text = "Rejestracja";
+            this.registerPanelBtn.UseVisualStyleBackColor = true;
+            this.registerPanelBtn.Click += new System.EventHandler(this.registerPanelBtn_Click);
+            // 
+            // LoginPanel
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Controls.Add(this.registerPanelBtn);
+            this.Name = "LoginPanel";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button registerPanelBtn;
     }
 }
