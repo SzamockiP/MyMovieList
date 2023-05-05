@@ -25,10 +25,21 @@ namespace MyMovieList
         public UserMovieListPanel m_userMovieListPanel = new UserMovieListPanel();
         public MovieDetailPanel m_movieDetailPanel = new MovieDetailPanel();
         public MovieSearchPanel m_movieSearchPanel = new MovieSearchPanel();
+        public NavBarPanel m_navBarPanel = new NavBarPanel();
 
         public MainForm()
         {
             InitializeComponent();
+
+            // Set display properties of panels
+            m_loginPanel.Dock = DockStyle.Fill;
+            m_registerPanel.Dock = DockStyle.Fill;
+            m_userAccountPanel.Dock = DockStyle.Fill;
+            m_userMovieListPanel.Dock = DockStyle.Fill;
+            m_movieDetailPanel.Dock = DockStyle.Fill;
+            m_movieSearchPanel.Dock = DockStyle.Fill;
+            m_navBarPanel.Dock = DockStyle.Top;
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -67,6 +78,8 @@ namespace MyMovieList
 
             // Show userAccoutntPanel
             Controls.Clear();
+
+            Controls.Add(m_navBarPanel);
             Controls.Add(m_userAccountPanel);
         }
     }

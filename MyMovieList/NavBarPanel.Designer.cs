@@ -28,8 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // NavBarPanel
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Red;
+            this.Name = "NavBarPanel";
+            this.Size = new System.Drawing.Size(300, 100);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
