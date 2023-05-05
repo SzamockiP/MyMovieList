@@ -28,10 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.usernameLbl = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // usernameLbl
+            // 
+            this.usernameLbl.AutoSize = true;
+            this.usernameLbl.Location = new System.Drawing.Point(20, 22);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(35, 13);
+            this.usernameLbl.TabIndex = 0;
+            this.usernameLbl.Text = "label1";
+            // 
+            // UserAccountPanel
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.usernameLbl);
+            this.Name = "UserAccountPanel";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label usernameLbl;
     }
 }

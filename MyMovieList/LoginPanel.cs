@@ -21,7 +21,22 @@ namespace MyMovieList
         {
             // Run parent function to show register form
             MainForm parent = (MainForm)this.Parent;
-            parent.ShowRegisterForm();
+            parent.ShowRegisterPanel();
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            // Get username and password
+            string username = "Admin";
+            string password = "Admin";
+
+            // Set main form variables
+            MainForm parent = (MainForm)this.Parent;
+            parent.m_username = username;
+            parent.m_password = password;
+
+            // Show user account panel
+            parent.ShowUserAccountPanel(username, password);
         }
     }
 }

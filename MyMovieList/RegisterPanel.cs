@@ -21,7 +21,7 @@ namespace MyMovieList
         {
             // Run parent function to show login form
             MainForm parent = (MainForm)this.Parent;
-            parent.ShowLoginForm();
+            parent.ShowLoginPanel();
         }
     }
 }

@@ -21,10 +21,10 @@ namespace MyMovieList
         // Set variables for panels
         public LoginPanel m_loginPanel = new LoginPanel();
         public RegisterPanel m_registerPanel = new RegisterPanel();
-        public MovieDetailPanel m_movieDetailPanel = new MovieDetailPanel();
-        public MovieSearchPanel m_movieSearchPanel = new MovieSearchPanel();
         public UserAccountPanel m_userAccountPanel = new UserAccountPanel();
         public UserMovieListPanel m_userMovieListPanel = new UserMovieListPanel();
+        public MovieDetailPanel m_movieDetailPanel = new MovieDetailPanel();
+        public MovieSearchPanel m_movieSearchPanel = new MovieSearchPanel();
 
         public MainForm()
         {
@@ -37,10 +37,10 @@ namespace MyMovieList
             Controls.Clear();
 
             // Show the login panel
-            ShowLoginForm();
+            ShowLoginPanel();
         }
 
-        public void ShowLoginForm()
+        public void ShowLoginPanel()
         {
             // Logout
             m_isLoggedIn = false;
@@ -50,7 +50,7 @@ namespace MyMovieList
             Controls.Add(m_loginPanel);
         }
 
-        public void ShowRegisterForm()
+        public void ShowRegisterPanel()
         {
             // Logout
             m_isLoggedIn = false;
@@ -58,6 +58,16 @@ namespace MyMovieList
             // Show register panel
             Controls.Clear();
             Controls.Add(m_registerPanel);
+        }
+
+        public void ShowUserAccountPanel(string username, string password)
+        {
+            // Set userAccountPanel variables to parameters
+            m_userAccountPanel.SetUser(username, password);
+
+            // Show userAccoutntPanel
+            Controls.Clear();
+            Controls.Add(m_userAccountPanel);
         }
     }
 }
