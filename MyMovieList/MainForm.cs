@@ -32,14 +32,13 @@ namespace MyMovieList
             InitializeComponent();
 
             // Set display properties of panels
+            m_navBarPanel.Dock = DockStyle.Top;
             m_loginPanel.Dock = DockStyle.Fill;
             m_registerPanel.Dock = DockStyle.Fill;
             m_userAccountPanel.Dock = DockStyle.Fill;
             m_userMovieListPanel.Dock = DockStyle.Fill;
             m_movieDetailPanel.Dock = DockStyle.Fill;
             m_movieSearchPanel.Dock = DockStyle.Fill;
-            m_navBarPanel.Dock = DockStyle.Top;
-
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -51,8 +50,28 @@ namespace MyMovieList
             ShowLoginPanel();
         }
 
+        private void ResetPanels()
+        {
+            // Reset panels to default
+            m_userAccountPanel = new UserAccountPanel();
+            m_userMovieListPanel = new UserMovieListPanel();
+            m_movieDetailPanel = new MovieDetailPanel();
+            m_movieSearchPanel = new MovieSearchPanel();
+            m_navBarPanel = new NavBarPanel();
+
+            m_userAccountPanel.Dock = DockStyle.Fill;
+            m_userMovieListPanel.Dock = DockStyle.Fill;
+            m_movieDetailPanel.Dock = DockStyle.Fill;
+            m_movieSearchPanel.Dock = DockStyle.Fill;
+            m_navBarPanel.Dock = DockStyle.Top;
+        }
+
         public void ShowLoginPanel()
         {
+            // Triggers when logging out
+            if (m_isLoggedIn)
+                ResetPanels();
+
             // Logout
             m_isLoggedIn = false;
 
@@ -63,6 +82,10 @@ namespace MyMovieList
 
         public void ShowRegisterPanel()
         {
+            // Triggers when logging out
+            if (m_isLoggedIn)
+                ResetPanels();
+
             // Logout
             m_isLoggedIn = false;
 
@@ -78,9 +101,13 @@ namespace MyMovieList
 
             // Show userAccoutntPanel
             Controls.Clear();
-
             Controls.Add(m_navBarPanel);
             Controls.Add(m_userAccountPanel);
+
+            // I don't know why this is needed, but it is
+            // Without this, parto of the userAccountPanel will be hidden behind the navBarPanel
+            // With this, the userAccountPanel will be under the navBarPanel
+            m_userAccountPanel.BringToFront();
         }
     }
 }

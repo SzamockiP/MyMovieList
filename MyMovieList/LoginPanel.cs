@@ -34,6 +34,7 @@ namespace MyMovieList
             MainForm parent = (MainForm)this.Parent;
             parent.m_username = username;
             parent.m_password = password;
+            parent.m_isLoggedIn = true;
 
             // Show user account panel
             parent.ShowUserAccountPanel(username, password);
