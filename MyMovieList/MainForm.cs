@@ -109,5 +109,14 @@ namespace MyMovieList
             // With this, the userAccountPanel will be under the navBarPanel
             m_userAccountPanel.BringToFront();
         }
+
+        public void ShowMovieSearchPanel()
+        {
+            // Show movieSearchPanel
+            Controls.Clear();
+            Controls.Add(m_navBarPanel);
+            Controls.Add(m_movieSearchPanel);
+            m_movieSearchPanel.BringToFront();
+        }
     }
 }

@@ -108,6 +108,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MovieSearchPanel.resx">
+      <DependentUpon>MovieSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NavBarPanel.resx">
       <DependentUpon>NavBarPanel.cs</DependentUpon>
     </EmbeddedResource>

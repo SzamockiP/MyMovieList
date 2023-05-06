@@ -23,5 +23,7 @@ namespace MyMovieList
             MainForm parent = (MainForm)this.Parent;
             parent.ShowLoginPanel();
         }
+
+
     }
 }

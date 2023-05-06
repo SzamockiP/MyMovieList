@@ -33,7 +33,7 @@
             // 
             // logoutBtn
             // 
-            this.logoutBtn.Location = new System.Drawing.Point(189, 44);
+            this.logoutBtn.Location = new System.Drawing.Point(222, 3);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(75, 23);
             this.logoutBtn.TabIndex = 0;

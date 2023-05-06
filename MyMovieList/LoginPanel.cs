@@ -37,7 +37,8 @@ namespace MyMovieList
             parent.m_isLoggedIn = true;
 
             // Show user account panel
-            parent.ShowUserAccountPanel(username, password);
+            //parent.ShowUserAccountPanel(username, password);
+            parent.ShowMovieSearchPanel();
         }
     }
 }
