@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginRequiredPanel.cs">
+    <Compile Include="components\LoginRequiredPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LoginRequiredPanel.Designer.cs">
+    <Compile Include="components\LoginRequiredPanel.Designer.cs">
       <DependentUpon>LoginRequiredPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -58,60 +58,60 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginPanel.cs">
+    <Compile Include="components\LoginPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LoginPanel.Designer.cs">
+    <Compile Include="components\LoginPanel.Designer.cs">
       <DependentUpon>LoginPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovieDetailPanel.cs">
+    <Compile Include="components\MovieDetailPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MovieDetailPanel.Designer.cs">
+    <Compile Include="components\MovieDetailPanel.Designer.cs">
       <DependentUpon>MovieDetailPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovieSearchPanel.cs">
+    <Compile Include="components\MovieSearchPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MovieSearchPanel.Designer.cs">
+    <Compile Include="components\MovieSearchPanel.Designer.cs">
       <DependentUpon>MovieSearchPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="NavBarPanel.cs">
+    <Compile Include="components\NavBarPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavBarPanel.Designer.cs">
+    <Compile Include="components\NavBarPanel.Designer.cs">
       <DependentUpon>NavBarPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterPanel.cs">
+    <Compile Include="components\RegisterPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RegisterPanel.Designer.cs">
+    <Compile Include="components\RegisterPanel.Designer.cs">
       <DependentUpon>RegisterPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserAccountPanel.cs">
+    <Compile Include="components\UserAccountPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserAccountPanel.Designer.cs">
+    <Compile Include="components\UserAccountPanel.Designer.cs">
       <DependentUpon>UserAccountPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserMovieListPanel.cs">
+    <Compile Include="components\UserMovieListPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserMovieListPanel.Designer.cs">
+    <Compile Include="components\UserMovieListPanel.Designer.cs">
       <DependentUpon>UserMovieListPanel.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LoginPanel.resx">
+    <EmbeddedResource Include="components\LoginPanel.resx">
       <DependentUpon>LoginPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MovieSearchPanel.resx">
+    <EmbeddedResource Include="components\MovieSearchPanel.resx">
       <DependentUpon>MovieSearchPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavBarPanel.resx">
+    <EmbeddedResource Include="components\NavBarPanel.resx">
       <DependentUpon>NavBarPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -123,10 +123,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RegisterPanel.resx">
+    <EmbeddedResource Include="components\RegisterPanel.resx">
       <DependentUpon>RegisterPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAccountPanel.resx">
+    <EmbeddedResource Include="components\UserAccountPanel.resx">
       <DependentUpon>UserAccountPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
