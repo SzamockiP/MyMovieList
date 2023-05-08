@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.searchBarPnl = new System.Windows.Forms.Panel();
-            this.movieListFlp = new System.Windows.Forms.FlowLayoutPanel();
-            this.searchTbx = new System.Windows.Forms.TextBox();
-            this.sortingOptionsCbx = new System.Windows.Forms.ComboBox();
             this.searchBtn = new System.Windows.Forms.Button();
+            this.sortingOptionsCbx = new System.Windows.Forms.ComboBox();
+            this.searchTbx = new System.Windows.Forms.TextBox();
+            this.movieListFlp = new System.Windows.Forms.FlowLayoutPanel();
             this.searchBarPnl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,30 +48,6 @@
             this.searchBarPnl.Size = new System.Drawing.Size(672, 100);
             this.searchBarPnl.TabIndex = 0;
             // 
-            // movieListFlp
-            // 
-            this.movieListFlp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.movieListFlp.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.movieListFlp.Location = new System.Drawing.Point(0, 100);
-            this.movieListFlp.Name = "movieListFlp";
-            this.movieListFlp.Size = new System.Drawing.Size(672, 333);
-            this.movieListFlp.TabIndex = 1;
-            // 
-            // searchTbx
-            // 
-            this.searchTbx.Location = new System.Drawing.Point(16, 48);
-            this.searchTbx.Name = "searchTbx";
-            this.searchTbx.Size = new System.Drawing.Size(435, 20);
-            this.searchTbx.TabIndex = 0;
-            // 
-            // sortingOptionsCbx
-            // 
-            this.sortingOptionsCbx.FormattingEnabled = true;
-            this.sortingOptionsCbx.Location = new System.Drawing.Point(538, 48);
-            this.sortingOptionsCbx.Name = "sortingOptionsCbx";
-            this.sortingOptionsCbx.Size = new System.Drawing.Size(121, 21);
-            this.sortingOptionsCbx.TabIndex = 1;
-            // 
             // searchBtn
             // 
             this.searchBtn.Location = new System.Drawing.Point(457, 46);
@@ -81,6 +57,31 @@
             this.searchBtn.Text = "button1";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
+            // sortingOptionsCbx
+            // 
+            this.sortingOptionsCbx.FormattingEnabled = true;
+            this.sortingOptionsCbx.Location = new System.Drawing.Point(538, 48);
+            this.sortingOptionsCbx.Name = "sortingOptionsCbx";
+            this.sortingOptionsCbx.Size = new System.Drawing.Size(121, 21);
+            this.sortingOptionsCbx.TabIndex = 1;
+            // 
+            // searchTbx
+            // 
+            this.searchTbx.Location = new System.Drawing.Point(16, 48);
+            this.searchTbx.Name = "searchTbx";
+            this.searchTbx.Size = new System.Drawing.Size(435, 20);
+            this.searchTbx.TabIndex = 0;
+            // 
+            // movieListFlp
+            // 
+            this.movieListFlp.AutoScroll = true;
+            this.movieListFlp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.movieListFlp.Location = new System.Drawing.Point(0, 100);
+            this.movieListFlp.Name = "movieListFlp";
+            this.movieListFlp.Size = new System.Drawing.Size(672, 333);
+            this.movieListFlp.TabIndex = 1;
+            this.movieListFlp.SizeChanged += new System.EventHandler(this.movieListFlp_SizeChanged);
+            // 
             // MovieSearchPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,6 +90,7 @@
             this.Controls.Add(this.searchBarPnl);
             this.Name = "MovieSearchPanel";
             this.Size = new System.Drawing.Size(672, 433);
+            this.Load += new System.EventHandler(this.MovieSearchPanel_Load);
             this.searchBarPnl.ResumeLayout(false);
             this.searchBarPnl.PerformLayout();
             this.ResumeLayout(false);
