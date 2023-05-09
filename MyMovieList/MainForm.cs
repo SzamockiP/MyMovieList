@@ -23,7 +23,6 @@ namespace MyMovieList
         public RegisterPanel m_registerPanel = new RegisterPanel();
         public UserAccountPanel m_userAccountPanel = new UserAccountPanel();
         public UserMovieListPanel m_userMovieListPanel = new UserMovieListPanel();
-        public MovieDetailPanel m_movieDetailPanel = new MovieDetailPanel();
         public MovieSearchPanel m_movieSearchPanel = new MovieSearchPanel();
         public NavBarPanel m_navBarPanel = new NavBarPanel();
 
@@ -37,7 +36,6 @@ namespace MyMovieList
             m_registerPanel.Dock = DockStyle.Fill;
             m_userAccountPanel.Dock = DockStyle.Fill;
             m_userMovieListPanel.Dock = DockStyle.Fill;
-            m_movieDetailPanel.Dock = DockStyle.Fill;
             m_movieSearchPanel.Dock = DockStyle.Fill;
         }
 
@@ -66,13 +64,11 @@ namespace MyMovieList
             // Reset panels to default
             m_userAccountPanel = new UserAccountPanel();
             m_userMovieListPanel = new UserMovieListPanel();
-            m_movieDetailPanel = new MovieDetailPanel();
             m_movieSearchPanel = new MovieSearchPanel();
             m_navBarPanel = new NavBarPanel();
 
             m_userAccountPanel.Dock = DockStyle.Fill;
             m_userMovieListPanel.Dock = DockStyle.Fill;
-            m_movieDetailPanel.Dock = DockStyle.Fill;
             m_movieSearchPanel.Dock = DockStyle.Fill;
             m_navBarPanel.Dock = DockStyle.Top;
         }

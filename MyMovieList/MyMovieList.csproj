@@ -87,12 +87,6 @@
     <Compile Include="components\LoginPanel.Designer.cs">
       <DependentUpon>LoginPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="components\MovieDetailPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="components\MovieDetailPanel.Designer.cs">
-      <DependentUpon>MovieDetailPanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="components\MovieSearchPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +103,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MyMovieList_DBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -165,14 +160,17 @@
     </EmbeddedResource>
     <None Include="MyMovieList_DBDataSet.xsc">
       <DependentUpon>MyMovieList_DBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="MyMovieList_DBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>MyMovieList_DBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="MyMovieList_DBDataSet.xss">
       <DependentUpon>MyMovieList_DBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -191,7 +189,31 @@
     <Content Include="ImagesDB\1.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ImagesDB\10.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="ImagesDB\2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesDB\3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesDB\4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesDB\5.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesDB\6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesDB\7.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesDB\8.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagesDB\9.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="MyMovieList_DB.mdf">

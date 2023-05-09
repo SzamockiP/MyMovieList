@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.searchBarPnl = new System.Windows.Forms.Panel();
-            this.searchBtn = new System.Windows.Forms.Button();
-            this.sortingOptionsCbx = new System.Windows.Forms.ComboBox();
-            this.searchTbx = new System.Windows.Forms.TextBox();
-            this.movieListFlp = new System.Windows.Forms.FlowLayoutPanel();
             this.searchFormPnl = new System.Windows.Forms.Panel();
+            this.searchTbx = new System.Windows.Forms.TextBox();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.movieListFlp = new System.Windows.Forms.FlowLayoutPanel();
             this.searchBarPnl.SuspendLayout();
             this.searchFormPnl.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +47,24 @@
             this.searchBarPnl.Size = new System.Drawing.Size(881, 80);
             this.searchBarPnl.TabIndex = 0;
             // 
+            // searchFormPnl
+            // 
+            this.searchFormPnl.BackColor = System.Drawing.Color.Transparent;
+            this.searchFormPnl.Controls.Add(this.searchTbx);
+            this.searchFormPnl.Controls.Add(this.searchBtn);
+            this.searchFormPnl.Location = new System.Drawing.Point(24, 17);
+            this.searchFormPnl.Name = "searchFormPnl";
+            this.searchFormPnl.Size = new System.Drawing.Size(562, 53);
+            this.searchFormPnl.TabIndex = 3;
+            // 
+            // searchTbx
+            // 
+            this.searchTbx.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.searchTbx.Location = new System.Drawing.Point(3, 3);
+            this.searchTbx.Name = "searchTbx";
+            this.searchTbx.Size = new System.Drawing.Size(435, 43);
+            this.searchTbx.TabIndex = 0;
+            // 
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F);
@@ -57,23 +74,7 @@
             this.searchBtn.TabIndex = 2;
             this.searchBtn.Text = "Search";
             this.searchBtn.UseVisualStyleBackColor = true;
-            // 
-            // sortingOptionsCbx
-            // 
-            this.sortingOptionsCbx.Font = new System.Drawing.Font("Segoe UI", 20.25F);
-            this.sortingOptionsCbx.FormattingEnabled = true;
-            this.sortingOptionsCbx.Location = new System.Drawing.Point(648, 3);
-            this.sortingOptionsCbx.Name = "sortingOptionsCbx";
-            this.sortingOptionsCbx.Size = new System.Drawing.Size(147, 45);
-            this.sortingOptionsCbx.TabIndex = 1;
-            // 
-            // searchTbx
-            // 
-            this.searchTbx.Font = new System.Drawing.Font("Segoe UI", 20.25F);
-            this.searchTbx.Location = new System.Drawing.Point(3, 3);
-            this.searchTbx.Name = "searchTbx";
-            this.searchTbx.Size = new System.Drawing.Size(435, 43);
-            this.searchTbx.TabIndex = 0;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // movieListFlp
             // 
@@ -85,17 +86,6 @@
             this.movieListFlp.Size = new System.Drawing.Size(881, 353);
             this.movieListFlp.TabIndex = 1;
             this.movieListFlp.SizeChanged += new System.EventHandler(this.movieListFlp_SizeChanged);
-            // 
-            // searchFormPnl
-            // 
-            this.searchFormPnl.BackColor = System.Drawing.Color.Transparent;
-            this.searchFormPnl.Controls.Add(this.searchTbx);
-            this.searchFormPnl.Controls.Add(this.searchBtn);
-            this.searchFormPnl.Controls.Add(this.sortingOptionsCbx);
-            this.searchFormPnl.Location = new System.Drawing.Point(24, 17);
-            this.searchFormPnl.Name = "searchFormPnl";
-            this.searchFormPnl.Size = new System.Drawing.Size(798, 53);
-            this.searchFormPnl.TabIndex = 3;
             // 
             // MovieSearchPanel
             // 
@@ -118,7 +108,6 @@
         private System.Windows.Forms.Panel searchBarPnl;
         private System.Windows.Forms.FlowLayoutPanel movieListFlp;
         private System.Windows.Forms.Button searchBtn;
-        private System.Windows.Forms.ComboBox sortingOptionsCbx;
         private System.Windows.Forms.TextBox searchTbx;
         private System.Windows.Forms.Panel searchFormPnl;
     }

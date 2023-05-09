@@ -22,7 +22,7 @@ namespace MyMovieList
             // populate movieListFlp with 10 MovieItemPanels
             for (int x = 0; x < 10; x++)
             {
-                MovieItemPanel movieItemPanel = new MovieItemPanel();
+                MovieItemPanel movieItemPanel = new MovieItemPanel(2);
                 movieListFlp.Controls.Add(movieItemPanel);
             }
         }
