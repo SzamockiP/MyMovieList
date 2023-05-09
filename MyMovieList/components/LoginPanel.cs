@@ -20,7 +20,7 @@ namespace MyMovieList
         private void registerPanelBtn_Click(object sender, EventArgs e)
         {
             // Run parent function to show register form
-            MainForm parent = (MainForm)this.Parent;
+            MainForm parent = (MainForm)Parent;
             parent.ShowRegisterPanel();
         }
 
@@ -31,7 +31,7 @@ namespace MyMovieList
             string password = "Admin";
 
             // Set main form variables
-            MainForm parent = (MainForm)this.Parent;
+            MainForm parent = (MainForm)Parent;
 
             // Show user account panel
             parent.SetUser(username, password);
@@ -53,6 +53,12 @@ namespace MyMovieList
         private void LoginPanel_Resize(object sender, EventArgs e)
         {
             CenterLoginForm();
+        }
+
+        public void SetLoginData(string username, string password)
+        {
+            loginTbx.Text = username;
+            passwordTbx.Text = password;
         }
     }
 }

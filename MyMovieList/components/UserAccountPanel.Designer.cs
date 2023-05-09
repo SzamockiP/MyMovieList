@@ -30,117 +30,150 @@
         {
             this.usernameLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.usernameTbx = new System.Windows.Forms.TextBox();
+            this.passwordTbx = new System.Windows.Forms.TextBox();
+            this.newPassword1Tbx = new System.Windows.Forms.TextBox();
+            this.newPassword2Tbx = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.changePasswordBtn = new System.Windows.Forms.Button();
+            this.changeUsernameBtn = new System.Windows.Forms.Button();
+            this.accountFormPnl = new System.Windows.Forms.Panel();
+            this.accountFormPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // usernameLbl
             // 
             this.usernameLbl.AutoSize = true;
-            this.usernameLbl.Location = new System.Drawing.Point(87, 79);
+            this.usernameLbl.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.usernameLbl.Location = new System.Drawing.Point(10, 10);
+            this.usernameLbl.Margin = new System.Windows.Forms.Padding(10);
             this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(55, 13);
+            this.usernameLbl.Size = new System.Drawing.Size(136, 37);
             this.usernameLbl.TabIndex = 0;
             this.usernameLbl.Text = "Username";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(113, 154);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.label1.Location = new System.Drawing.Point(10, 163);
+            this.label1.Margin = new System.Windows.Forms.Padding(10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(128, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Password";
             // 
-            // textBox1
+            // usernameTbx
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.usernameTbx.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.usernameTbx.Location = new System.Drawing.Point(241, 7);
+            this.usernameTbx.Margin = new System.Windows.Forms.Padding(10);
+            this.usernameTbx.Name = "usernameTbx";
+            this.usernameTbx.Size = new System.Drawing.Size(200, 43);
+            this.usernameTbx.TabIndex = 2;
             // 
-            // textBox2
+            // passwordTbx
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.passwordTbx.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.passwordTbx.Location = new System.Drawing.Point(241, 160);
+            this.passwordTbx.Margin = new System.Windows.Forms.Padding(10, 30, 10, 10);
+            this.passwordTbx.Name = "passwordTbx";
+            this.passwordTbx.Size = new System.Drawing.Size(200, 43);
+            this.passwordTbx.TabIndex = 3;
             // 
-            // textBox3
+            // newPassword1Tbx
             // 
-            this.textBox3.Location = new System.Drawing.Point(172, 177);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.newPassword1Tbx.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.newPassword1Tbx.Location = new System.Drawing.Point(241, 223);
+            this.newPassword1Tbx.Margin = new System.Windows.Forms.Padding(10);
+            this.newPassword1Tbx.Name = "newPassword1Tbx";
+            this.newPassword1Tbx.Size = new System.Drawing.Size(200, 43);
+            this.newPassword1Tbx.TabIndex = 4;
             // 
-            // textBox4
+            // newPassword2Tbx
             // 
-            this.textBox4.Location = new System.Drawing.Point(172, 217);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
+            this.newPassword2Tbx.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.newPassword2Tbx.Location = new System.Drawing.Point(241, 286);
+            this.newPassword2Tbx.Margin = new System.Windows.Forms.Padding(10);
+            this.newPassword2Tbx.Name = "newPassword2Tbx";
+            this.newPassword2Tbx.Size = new System.Drawing.Size(200, 43);
+            this.newPassword2Tbx.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 184);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.label2.Location = new System.Drawing.Point(10, 226);
+            this.label2.Margin = new System.Windows.Forms.Padding(10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(211, 37);
             this.label2.TabIndex = 6;
             this.label2.Text = "New Password 1";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 224);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.label3.Location = new System.Drawing.Point(10, 289);
+            this.label3.Margin = new System.Windows.Forms.Padding(10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.Size = new System.Drawing.Size(211, 37);
             this.label3.TabIndex = 7;
             this.label3.Text = "New Password 2";
             // 
-            // button1
+            // changePasswordBtn
             // 
-            this.button1.Location = new System.Drawing.Point(327, 93);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.changePasswordBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.changePasswordBtn.Location = new System.Drawing.Point(291, 349);
+            this.changePasswordBtn.Margin = new System.Windows.Forms.Padding(10);
+            this.changePasswordBtn.Name = "changePasswordBtn";
+            this.changePasswordBtn.Size = new System.Drawing.Size(150, 50);
+            this.changePasswordBtn.TabIndex = 8;
+            this.changePasswordBtn.Text = "button1";
+            this.changePasswordBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // changeUsernameBtn
             // 
-            this.button2.Location = new System.Drawing.Point(327, 217);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 49);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.changeUsernameBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F);
+            this.changeUsernameBtn.Location = new System.Drawing.Point(291, 70);
+            this.changeUsernameBtn.Margin = new System.Windows.Forms.Padding(10);
+            this.changeUsernameBtn.Name = "changeUsernameBtn";
+            this.changeUsernameBtn.Size = new System.Drawing.Size(150, 50);
+            this.changeUsernameBtn.TabIndex = 9;
+            this.changeUsernameBtn.Text = "button2";
+            this.changeUsernameBtn.UseVisualStyleBackColor = true;
+            // 
+            // accountFormPnl
+            // 
+            this.accountFormPnl.Controls.Add(this.changeUsernameBtn);
+            this.accountFormPnl.Controls.Add(this.usernameLbl);
+            this.accountFormPnl.Controls.Add(this.changePasswordBtn);
+            this.accountFormPnl.Controls.Add(this.label1);
+            this.accountFormPnl.Controls.Add(this.label3);
+            this.accountFormPnl.Controls.Add(this.usernameTbx);
+            this.accountFormPnl.Controls.Add(this.label2);
+            this.accountFormPnl.Controls.Add(this.passwordTbx);
+            this.accountFormPnl.Controls.Add(this.newPassword2Tbx);
+            this.accountFormPnl.Controls.Add(this.newPassword1Tbx);
+            this.accountFormPnl.Location = new System.Drawing.Point(75, 43);
+            this.accountFormPnl.Name = "accountFormPnl";
+            this.accountFormPnl.Size = new System.Drawing.Size(450, 407);
+            this.accountFormPnl.TabIndex = 10;
             // 
             // UserAccountPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.usernameLbl);
+            this.Controls.Add(this.accountFormPnl);
             this.Name = "UserAccountPanel";
-            this.Size = new System.Drawing.Size(587, 518);
+            this.Size = new System.Drawing.Size(583, 518);
+            this.Load += new System.EventHandler(this.UserAccountPanel_Load);
+            this.SizeChanged += new System.EventHandler(this.UserAccountPanel_SizeChanged);
+            this.accountFormPnl.ResumeLayout(false);
+            this.accountFormPnl.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -148,13 +181,14 @@
 
         private System.Windows.Forms.Label usernameLbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox usernameTbx;
+        private System.Windows.Forms.TextBox passwordTbx;
+        private System.Windows.Forms.TextBox newPassword1Tbx;
+        private System.Windows.Forms.TextBox newPassword2Tbx;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button changePasswordBtn;
+        private System.Windows.Forms.Button changeUsernameBtn;
+        private System.Windows.Forms.Panel accountFormPnl;
     }
 }

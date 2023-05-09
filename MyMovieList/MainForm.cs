@@ -91,6 +91,11 @@ namespace MyMovieList
             Controls.Add(m_loginPanel);
         }
 
+        public void SetLoginPanelData(string username, string password)
+        {
+            m_loginPanel.SetLoginData(username, password);
+        }
+
         public void ShowRegisterPanel()
         {
             // Triggers when logging out

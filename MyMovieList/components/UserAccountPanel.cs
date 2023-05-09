@@ -30,5 +30,22 @@ namespace MyMovieList
             // Set username and password labels
             usernameLbl.Text = m_username;
         }
+
+        private void CenterAccountFormPanel()
+        {
+            int marginWidth = (Width - accountFormPnl.Width) / 2;
+            int marginHeight = (Height - accountFormPnl.Height) / 2;
+            accountFormPnl.Location = new Point(marginWidth, marginHeight);
+        }
+
+        private void UserAccountPanel_Load(object sender, EventArgs e)
+        {
+            CenterAccountFormPanel();
+        }
+
+        private void UserAccountPanel_SizeChanged(object sender, EventArgs e)
+        {
+            CenterAccountFormPanel();
+        }
     }
 }
