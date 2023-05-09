@@ -44,7 +44,7 @@ namespace MyMovieList
 
         private void FloatNavbarButtonsPnl()
         {
-            int newPos = Width - navButtonsPnl.Width - 80;
+            int newPos = Width - navButtonsPnl.Width - 25;
             
             navButtonsPnl.Location = new Point(newPos, navButtonsPnl.Location.Y);
         }

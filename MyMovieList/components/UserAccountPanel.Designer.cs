@@ -125,23 +125,23 @@
             // changePasswordBtn
             // 
             this.changePasswordBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F);
-            this.changePasswordBtn.Location = new System.Drawing.Point(291, 349);
+            this.changePasswordBtn.Location = new System.Drawing.Point(136, 349);
             this.changePasswordBtn.Margin = new System.Windows.Forms.Padding(10);
             this.changePasswordBtn.Name = "changePasswordBtn";
-            this.changePasswordBtn.Size = new System.Drawing.Size(150, 50);
+            this.changePasswordBtn.Size = new System.Drawing.Size(305, 50);
             this.changePasswordBtn.TabIndex = 8;
-            this.changePasswordBtn.Text = "button1";
+            this.changePasswordBtn.Text = "Change Password";
             this.changePasswordBtn.UseVisualStyleBackColor = true;
             // 
             // changeUsernameBtn
             // 
             this.changeUsernameBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F);
-            this.changeUsernameBtn.Location = new System.Drawing.Point(291, 70);
+            this.changeUsernameBtn.Location = new System.Drawing.Point(136, 70);
             this.changeUsernameBtn.Margin = new System.Windows.Forms.Padding(10);
             this.changeUsernameBtn.Name = "changeUsernameBtn";
-            this.changeUsernameBtn.Size = new System.Drawing.Size(150, 50);
+            this.changeUsernameBtn.Size = new System.Drawing.Size(305, 50);
             this.changeUsernameBtn.TabIndex = 9;
-            this.changeUsernameBtn.Text = "button2";
+            this.changeUsernameBtn.Text = "Change Username";
             this.changeUsernameBtn.UseVisualStyleBackColor = true;
             // 
             // accountFormPnl

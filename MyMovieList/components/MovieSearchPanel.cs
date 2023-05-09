@@ -40,7 +40,7 @@ namespace MyMovieList
             int leftSpace = width % (itemWidth + itemMargin);
 
             // set padding to movieListFlp
-            movieListFlp.Padding = new Padding(leftSpace / 2, 0, leftSpace / 2, 0);
+            movieListFlp.Padding = new Padding(leftSpace / 2, 0, leftSpace / 2, 50);
         }
 
         private void MovieSearchPanel_Load(object sender, EventArgs e)
