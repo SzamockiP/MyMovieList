@@ -41,5 +41,22 @@ namespace MyMovieList
             MainForm parent = (MainForm)Parent;
             parent.ShowMovieSearchPanel();
         }
+
+        private void FloatNavbarButtonsPnl()
+        {
+            int newPos = Width - navButtonsPnl.Width - 80;
+            
+            navButtonsPnl.Location = new Point(newPos, navButtonsPnl.Location.Y);
+        }
+
+        private void NavBarPanel_Load(object sender, EventArgs e)
+        {
+            FloatNavbarButtonsPnl();
+        }
+
+        private void NavBarPanel_SizeChanged(object sender, EventArgs e)
+        {
+            FloatNavbarButtonsPnl();
+        }
     }
 }

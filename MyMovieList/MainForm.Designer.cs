@@ -34,7 +34,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1045, 661);
+            this.MinimumSize = new System.Drawing.Size(1000, 700);
             this.Name = "MainForm";
             this.Text = "My Movie List";
             this.Load += new System.EventHandler(this.MainForm_Load);

@@ -48,11 +48,20 @@ namespace MyMovieList
             movieListFlp.CausesValidation = false;
             PopulateList("");
             CenterItemsInList();
+            CenterSearchFormPanel();
         }
 
         private void movieListFlp_SizeChanged(object sender, EventArgs e)
         {
             CenterItemsInList();
+            CenterSearchFormPanel();
+        }
+
+        private void CenterSearchFormPanel()
+        {
+            int marginHeight = (searchBarPnl.Height - searchFormPnl.Height) / 2;
+            int marginWidth = (searchBarPnl.Width - searchFormPnl.Width) / 2;
+            searchFormPnl.Location = new Point(marginWidth, marginHeight);
         }
     }
 }

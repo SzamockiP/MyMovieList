@@ -40,7 +40,7 @@
             // 
             // registerPanelBtn
             // 
-            this.registerPanelBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerPanelBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F);
             this.registerPanelBtn.Location = new System.Drawing.Point(183, 133);
             this.registerPanelBtn.Margin = new System.Windows.Forms.Padding(10);
             this.registerPanelBtn.Name = "registerPanelBtn";
@@ -52,7 +52,7 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F);
             this.loginBtn.Location = new System.Drawing.Point(10, 133);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(10);
             this.loginBtn.Name = "loginBtn";
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.Controls.Add(this.loginFormPnl);
             this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.Name = "LoginPanel";
