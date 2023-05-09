@@ -60,9 +60,10 @@ namespace MyMovieList
                     {
                         // Set main form variables
                         MainForm parent = (MainForm)Parent;
+                        string userId = reader["Id"].ToString();
 
                         // Show user account panel
-                        parent.SetUser(username, password);
+                        parent.SetUser(username, password, userId);
                         parent.ShowMovieSearchPanel(); 
 
                         return;

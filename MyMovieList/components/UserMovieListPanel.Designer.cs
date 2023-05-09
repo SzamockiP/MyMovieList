@@ -40,6 +40,7 @@
             this.movieListFlp.Name = "movieListFlp";
             this.movieListFlp.Size = new System.Drawing.Size(748, 627);
             this.movieListFlp.TabIndex = 2;
+            this.movieListFlp.Paint += new System.Windows.Forms.PaintEventHandler(this.movieListFlp_Paint);
             // 
             // UserMovieListPanel
             // 

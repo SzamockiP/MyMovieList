@@ -40,9 +40,10 @@ namespace MyMovieList
                 {
                     connection.Open();
                     SqlDataReader reader = sqlCommand.ExecuteReader();
+                    MainForm parent = (MainForm)Parent;
                     while (reader.Read())
                     {
-                        MovieItemPanel movieItemPanel = new MovieItemPanel((int)reader["Id"]);
+                        MovieItemPanel movieItemPanel = new MovieItemPanel((int)reader["Id"], parent.m_userID);
                         movieListFlp.Controls.Add(movieItemPanel);
                     }
                     reader.Close();

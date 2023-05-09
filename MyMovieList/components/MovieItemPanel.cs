@@ -18,15 +18,18 @@ namespace MyMovieList.components
         public int m_movieRating = 0;
         public int m_rate = 0;
         public bool m_watched = false;
+        public string m_userID;
         private string m_sqlConnectionString = Properties.Settings.Default.MyMovieList_DBConnectionString;
 
 
-        public MovieItemPanel(int movieId)
+        public MovieItemPanel(int movieId, string userId)
         {
             InitializeComponent();
             watchedLbl.Hide();
             m_movieId = movieId;
+            m_userID = userId;
         }
+
 
         private void MovieItemPanel_Load(object sender, EventArgs e)
         {
@@ -46,9 +49,43 @@ namespace MyMovieList.components
                     if (reader.Read())
                     {
                         titleLbl.Text = reader["Title"].ToString();
-                        ratingLbl.Text = reader["Rating"].ToString();
 
                         imageId = reader["ImageId"].ToString();
+                        reader.Close();
+
+                        // get here data from this user, if movie is watched etc.
+                        try
+                        {
+                            SqlCommand sqlCommand2 = new SqlCommand("SELECT * FROM MovieRates WHERE UserId=@userId AND MovieID=@movieID", connection);
+                            sqlCommand2.Parameters.AddWithValue("@userID", Convert.ToInt32(m_userID));
+                            sqlCommand2.Parameters.AddWithValue("@movieID", Convert.ToInt32(m_movieId));
+
+                            SqlDataReader reader2= sqlCommand2.ExecuteReader();
+                            if(reader2.Read())
+                            {
+                                m_rate = (int)reader2["Rate"];
+
+
+                                m_watched = (bool)reader2["Watched"];
+
+                                if (m_watched)
+                                {
+                                    watchedLbl.Show();
+                                    m_watched = true;
+                                }
+                                else
+                                {
+                                    m_watched = false;
+                                    watchedLbl.Hide();
+                                }
+                            }
+                            reader2.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex);
+                        }
+
 
                         try
                         {
@@ -62,14 +99,12 @@ namespace MyMovieList.components
 
                         return;
                     }
-                    reader.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
         }
 
         private void MovieItemPanel_Click(object sender, EventArgs e)
@@ -86,47 +121,9 @@ namespace MyMovieList.components
             }
         }
 
-        private void rateBtn_Click(object sender, EventArgs e)
+        private void ratingLbl_Click(object sender, EventArgs e)
         {
-            if(m_rate == 0)
-            {
-                m_rate = 1;
-                rateBtn.BackColor = Color.Green;
-                rateBtn.Text = "+";
-            }
-            else if(m_rate == 1) 
-            {
-                m_rate = -1;
-                rateBtn.BackColor = Color.Red;
-                rateBtn.Text = "-";
-            }
-            else { 
-                m_rate = 0;
-                rateBtn.BackColor = Color.Ivory;
-                rateBtn.Text = "=";
-            }
-        }
 
-        private void watchedLbl_Click(object sender, EventArgs e)
-        {
-            if (m_rate == 0)
-            {
-                m_rate = 1;
-                rateBtn.BackColor = Color.Green;
-                rateBtn.Text = "+";
-            }
-            else if (m_rate == 1)
-            {
-                m_rate = -1;
-                rateBtn.BackColor = Color.Red;
-                rateBtn.Text = "-";
-            }
-            else
-            {
-                m_rate = 0;
-                rateBtn.BackColor = Color.Ivory;
-                rateBtn.Text = "=";
-            }
         }
     }
 }

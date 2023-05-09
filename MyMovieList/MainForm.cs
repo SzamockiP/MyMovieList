@@ -15,6 +15,7 @@ namespace MyMovieList
         // Set variables for user
         public string m_username;
         public string m_password;
+        public string m_userID;
 
         public bool m_isLoggedIn = false;
 
@@ -48,11 +49,12 @@ namespace MyMovieList
             ShowLoginPanel();
         }
 
-        public void SetUser(string username, string password)
+        public void SetUser(string username, string password, string userId)
         {
             // Set user variables
             m_username = username;
             m_password = password;
+            m_userID = userId;
             // Set logged in status
             m_isLoggedIn = true;
             // Set user account panel

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,22 +14,47 @@ namespace MyMovieList
 {
     public partial class UserMovieListPanel : UserControl
     {
+        private string m_sqlConnectionString = Properties.Settings.Default.MyMovieList_DBConnectionString;
         public UserMovieListPanel()
         {
             InitializeComponent();
         }
-        private void PopulateList(string searchQuery)
+
+        private void PopulateList()
         {
-            // populate movieListFlp with 10 MovieItemPanels
-            for (int x = 0; x < 10; x++)
-            {
-                MovieItemPanel movieItemPanel = new MovieItemPanel(2);
-                movieListFlp.Controls.Add(movieItemPanel);
+            using (SqlConnection connection = new SqlConnection(m_sqlConnectionString))
+            {  
+                try
+                {
+                    connection.Open();
+
+                    SqlCommand sqlCommand = new SqlCommand(
+                        "SELECT Movies.Id, Movies.Title, Movies.Rating, Movies.ImageId " +
+                        "FROM Movies " +
+                        "JOIN MovieRates ON Movies.Id = MovieRates.MovieId " +
+                        "WHERE MovieRates.UserId=@currentUserID", connection);
+
+                    MainForm parent = (MainForm)Parent;
+                    sqlCommand.Parameters.AddWithValue("@currentUserID", parent.m_userID);
+
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        MovieItemPanel movieItemPanel = new MovieItemPanel((int)reader["Id"], parent.m_userID);
+                        movieListFlp.Controls.Add(movieItemPanel);
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
         private void UserMovieListPanel_Load(object sender, EventArgs e)
         {
-            PopulateList("");
+            PopulateList();
             CenterItemsInList();
         }
 
@@ -38,6 +64,7 @@ namespace MyMovieList
             int width = movieListFlp.ClientSize.Width;
 
             // get item width 
+            if (movieListFlp.Controls.Count <= 0) return;
             int itemWidth = movieListFlp.Controls[0].Width;
             int itemMargin = movieListFlp.Controls[0].Margin.Left + movieListFlp.Controls[0].Margin.Right;
 
@@ -50,6 +77,11 @@ namespace MyMovieList
         private void UserMovieListPanel_SizeChanged(object sender, EventArgs e)
         {
             CenterItemsInList();
+        }
+
+        private void movieListFlp_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
