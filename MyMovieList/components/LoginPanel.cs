@@ -32,13 +32,27 @@ namespace MyMovieList
 
             // Set main form variables
             MainForm parent = (MainForm)this.Parent;
-            parent.m_username = username;
-            parent.m_password = password;
-            parent.m_isLoggedIn = true;
 
             // Show user account panel
-            //parent.ShowUserAccountPanel(username, password);
+            parent.SetUser(username, password);
             parent.ShowMovieSearchPanel();
+        }
+
+        private void CenterLoginForm()
+        {
+            int marginWidth = (Width - loginFormPnl.Width) / 2;
+            int marginHeight = (Height - loginFormPnl.Height) / 2;
+            loginFormPnl.Location = new Point(marginWidth, marginHeight);
+        }
+
+        private void LoginPanel_Load(object sender, EventArgs e)
+        {
+            CenterLoginForm();
+        }
+
+        private void LoginPanel_Resize(object sender, EventArgs e)
+        {
+            CenterLoginForm();
         }
     }
 }

@@ -50,6 +50,17 @@ namespace MyMovieList
             ShowLoginPanel();
         }
 
+        public void SetUser(string username, string password)
+        {
+            // Set user variables
+            m_username = username;
+            m_password = password;
+            // Set logged in status
+            m_isLoggedIn = true;
+            // Set user account panel
+            m_userAccountPanel.SetUser(username, password);
+        }
+
         private void ResetPanels()
         {
             // Reset panels to default
@@ -94,11 +105,8 @@ namespace MyMovieList
             Controls.Add(m_registerPanel);
         }
 
-        public void ShowUserAccountPanel(string username, string password)
+        public void ShowUserAccountPanel()
         {
-            // Set userAccountPanel variables to parameters
-            m_userAccountPanel.SetUser(username, password);
-
             // Show userAccoutntPanel
             Controls.Clear();
             Controls.Add(m_navBarPanel);
@@ -117,6 +125,14 @@ namespace MyMovieList
             Controls.Add(m_navBarPanel);
             Controls.Add(m_movieSearchPanel);
             m_movieSearchPanel.BringToFront();
+        }
+
+        public void ShowUserMovieListPanel()
+        {
+            Controls.Clear();
+            Controls.Add(m_navBarPanel);
+            Controls.Add(m_userMovieListPanel);
+            m_userMovieListPanel.BringToFront();
         }
     }
 }

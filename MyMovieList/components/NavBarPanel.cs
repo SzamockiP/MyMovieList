@@ -20,10 +20,26 @@ namespace MyMovieList
         private void logoutBtn_Click(object sender, EventArgs e)
         {
             // Run parent function to show login form
-            MainForm parent = (MainForm)this.Parent;
+            MainForm parent = (MainForm)Parent;
             parent.ShowLoginPanel();
         }
 
+        private void accountBtn_Click(object sender, EventArgs e)
+        {
+            MainForm parent = (MainForm)Parent;
+            parent.ShowUserAccountPanel();
+        }
 
+        private void listBtn_Click(object sender, EventArgs e)
+        {
+            MainForm parent = (MainForm)Parent;
+            parent.ShowUserMovieListPanel();
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            MainForm parent = (MainForm)Parent;
+            parent.ShowMovieSearchPanel();
+        }
     }
 }
