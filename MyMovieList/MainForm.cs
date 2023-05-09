@@ -128,6 +128,7 @@ namespace MyMovieList
             Controls.Add(m_navBarPanel);
             Controls.Add(m_movieSearchPanel);
             m_movieSearchPanel.BringToFront();
+            m_movieSearchPanel.PopulateList("");
         }
 
         public void ShowUserMovieListPanel()
@@ -136,6 +137,7 @@ namespace MyMovieList
             Controls.Add(m_navBarPanel);
             Controls.Add(m_userMovieListPanel);
             m_userMovieListPanel.BringToFront();
+            m_userMovieListPanel.PopulateList();
         }
     }
 }

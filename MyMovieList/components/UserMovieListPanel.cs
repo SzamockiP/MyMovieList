@@ -20,8 +20,10 @@ namespace MyMovieList
             InitializeComponent();
         }
 
-        private void PopulateList()
+        public void PopulateList()
         {
+            // Clear list
+            movieListFlp.Controls.Clear();
             using (SqlConnection connection = new SqlConnection(m_sqlConnectionString))
             {  
                 try
@@ -29,7 +31,7 @@ namespace MyMovieList
                     connection.Open();
 
                     SqlCommand sqlCommand = new SqlCommand(
-                        "SELECT Movies.Id, Movies.Title, Movies.Rating, Movies.ImageId " +
+                        "SELECT Movies.Id, Movies.Title, Movies.ImageId " +
                         "FROM Movies " +
                         "JOIN MovieRates ON Movies.Id = MovieRates.MovieId " +
                         "WHERE MovieRates.UserId=@currentUserID", connection);

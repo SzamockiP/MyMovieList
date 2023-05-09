@@ -21,9 +21,10 @@ namespace MyMovieList
             InitializeComponent();
         }
 
-        private void PopulateList(string searchQuery)
+        public void PopulateList(string searchQuery)
         {
-           
+           // clear list
+            movieListFlp.Controls.Clear();
             using (SqlConnection connection = new SqlConnection(m_sqlConnectionString))
             {
                 SqlCommand sqlCommand;

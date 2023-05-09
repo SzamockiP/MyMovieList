@@ -113,11 +113,44 @@ namespace MyMovieList.components
             {
                 watchedLbl.Hide();
                 m_watched = false;
+
+                using (SqlConnection connection = new SqlConnection(m_sqlConnectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        SqlCommand sqlCommand = new SqlCommand("DELETE FROM MovieRates WHERE UserId=@userid", connection);
+                        sqlCommand.Parameters.AddWithValue("@userId",m_userID);
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {
                 watchedLbl.Show();
                 m_watched = true;
+
+                using (SqlConnection connection = new SqlConnection(m_sqlConnectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        SqlCommand sqlCommand = new SqlCommand("INSERT INTO MovieRates(UserId,MovieId, Watched,Rate) VALUES (@userid, @movieID, 1, 0)", connection);
+                        sqlCommand.Parameters.AddWithValue("@userId", m_userID);
+                        sqlCommand.Parameters.AddWithValue("@movieId", m_movieId);
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
 
